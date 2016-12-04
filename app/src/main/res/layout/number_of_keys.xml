@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical"
+tools:context=".NumberOfKeysActivity"
+    android:background="@color/colorBackGround">
+
+    <include layout="@layout/toolbar" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/minKeys"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/maxStart"
+        android:id="@+id/textMax"
+        android:textSize="15dp"
+        android:layout_above="@+id/maxKeys"
+        android:layout_alignLeft="@+id/maxKeys"
+        android:layout_alignStart="@+id/maxKeys"
+        android:layout_alignRight="@+id/maxKeys"
+        android:layout_alignEnd="@+id/maxKeys"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/minStart"
+        android:id="@+id/textMin"
+        android:layout_above="@+id/minKeys"
+        android:layout_alignLeft="@+id/minKeys"
+        android:layout_alignStart="@+id/minKeys"
+        android:textSize="15dp"
+        android:layout_alignRight="@+id/minKeys"
+        android:layout_alignEnd="@+id/minKeys"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="STEP 2"
+        android:visibility="invisible"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:textColor="@color/colorToolbar"
+        android:textStyle="bold" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/maxKeys"
+        android:layout_alignTop="@+id/minKeys"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+    <TextView
+        android:shape="ring"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="STEP 2"
+        android:id="@+id/textStep"
+        android:layout_alignBottom="@+id/entries_list_view"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="@color/colorToolbar"
+        android:visibility="visible"
+        android:textSize="14pt"
+        android:textIsSelectable="false"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
