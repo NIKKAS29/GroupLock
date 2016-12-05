@@ -13,3 +13,7 @@ script:
   ./gradlew build
   
 sudo: required
+
+after_success:
+  - echo "Build was successful. $TRAVIS_TEST_RESULT"
+  - ls -l $TRAVIS_BUILD_DIR/target
