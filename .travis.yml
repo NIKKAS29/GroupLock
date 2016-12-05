@@ -14,6 +14,11 @@ script:
   
 sudo: required
 
-after_success:
-  - echo "Build was successful. $TRAVIS_TEST_RESULT"
-  - ls -l $TRAVIS_BUILD_DIR/target
+deploy:
+ provider: azure_web_apps
+ username: nikkas
+ password: Nkas48695458
+ site: grouplock
+ skip_cleanup: true
+ verbose: true
+
